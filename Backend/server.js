@@ -11,6 +11,11 @@ const PORT = 8080;
 app.use(express.json());
 app.use(cors());
 
+app.get("/", (req, res) => {
+  res.send("Backend is running 🚀");
+});
+
+
 app.use("/api", chatRoutes);
 
 app.listen(PORT, () => {
